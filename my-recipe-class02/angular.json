@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "my-recipe-class02"
+    }
+  },
+  "defaultProject": "my-recipe-class02",
+  "cli": {
+    "analytics": "3b0cd7c9-728c-404a-9022-05987e5d955f"
+  }
 }
