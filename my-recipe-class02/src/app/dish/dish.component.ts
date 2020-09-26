@@ -8,7 +8,7 @@ import { Dish } from '../interfaces/dish';
 })
 export class DishComponent implements OnInit {
 
-  @Input() dish: Dish;
+  // @Input() dish: Dish;
   // @Input() name = 'ceviche';
   private _name: string;
   private _totalIngredients: number;
@@ -16,6 +16,7 @@ export class DishComponent implements OnInit {
   get name(): string{
     return this._name;
   }
+  
   @Input() set name(value: string){
     this._name = this.generateName(value);
     console.log(':: -> ', this._name);
@@ -25,8 +26,16 @@ export class DishComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  generateName(name: string): string{
-    return 'El nombre es : ${name}';
+  @Input() set dish(value: Dish){
+    this._name = this.generateName(value.name);
+    this._totalIngredients = value.ingredients.length;
   }
 
+  generateName(name: string): string{
+    return `El nombre es : ${name}`;
+  }
+
+  get totalIngredients(): number{
+    return this._totalIngredients;
+  }
 }
