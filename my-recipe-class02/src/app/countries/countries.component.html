@@ -1,2 +1,10 @@
-<p>countries works!</p>
+<button (click)="send(selected.currencies[0].name)">Enviar</button>
+<hr>
 <p>Country : {{selected.name}}</p>
+<br>{{total | percent}}
+<br>{{total | currency: selected.currencies[0].symbol }}
+<br>{{selected.currencies[0].name | uppercase}}
+<br>{{birthday | date: "fullDate" | lowercase}}
+<br>
+<hr>
+<pre>{{selected | json}}</pre>
