@@ -16,7 +16,7 @@ export class DishComponent implements OnInit {
   get name(): string{
     return this._name;
   }
-  
+
   @Input() set name(value: string){
     this._name = this.generateName(value);
     console.log(':: -> ', this._name);
