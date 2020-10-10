@@ -7,6 +7,7 @@ import { MenuComponent } from './menu/menu.component';
 import { DishComponent } from './dish/dish.component';
 import { OrderComponent } from './order/order.component';
 import { CountriesComponent } from './countries/countries.component';
+import { FilesizePipe } from '@app/pipes';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CountriesComponent } from './countries/countries.component';
     MenuComponent,
     DishComponent,
     OrderComponent,
-    CountriesComponent
+    CountriesComponent,
+    FilesizePipe
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,8 @@
 <br>{{total | currency: selected.currencies[0].symbol }}
 <br>{{selected.currencies[0].name | uppercase}}
 <br>{{birthday | date: "fullDate" | lowercase}}
+
+<br>{{birthday | date: "dd / MMMM / yyyy h:mm a" }}
 <br>
 <hr>
 <pre>{{selected | json}}</pre>
