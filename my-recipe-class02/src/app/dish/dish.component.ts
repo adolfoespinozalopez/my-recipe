@@ -27,6 +27,7 @@ export class DishComponent implements OnInit {
   }
 
   @Input() set dish(value: Dish){
+    console.log(':: -> ', value);
     this._name = this.generateName(value.name);
     this._totalIngredients = value.ingredients.length;
   }

@@ -2,7 +2,7 @@
 Hola {{name}}
 
 <ul>
-    <li *ngFor="let dish of dishes" class="dishes">
-        <app-dish [dish]="dish"></app-dish>
+    <li *ngFor="let dish of dishes"  class="dishes" [style.display]="show(dish.stock)">
+        <app-dish *ngIf="dish.stock" [dish]="dish"></app-dish>
     </li>
 </ul>

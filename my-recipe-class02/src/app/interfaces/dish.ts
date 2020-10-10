@@ -9,14 +9,21 @@ export interface DishStructure{
     notify(): Notify;
 }
 
-export interface Ingredients{
+export interface Ingredient{
     name: string;
-    qty: number;
+    quantity: string;
 }
 
 export class Dish {
+    id: number;
     name: string;
-    ingredients: Ingredients[];
+    ingredients: Ingredient[];
+    rating: number;
+    category: string;
+    price: number;
+    inventoryStatus: string;
+    stock: boolean;
+    image: string;
 }
 /*
 export class Dish implements DishStructure{
