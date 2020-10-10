@@ -24,4 +24,12 @@ export class MenuComponent implements OnInit {
     return value ? 'block' : 'none';
   }
 
+  validateStock(value: boolean): string{
+    return value ? 'stock' : 'no-stock';
+  }
+
+  showSpicy(value: number): string{
+    return (value > 2) ? 'spicy' : 'no-spicy';
+  }
+
 }

@@ -12,6 +12,7 @@
       "rating": 5,
       "category": "Marina",
       "price": 15,
+      "spicy": 3,
       "inventoryStatus": "INSTOCK",
       "stock": true,
       "image": "https://tipsparatuviaje.com/wp-content/uploads/2019/08/ceviche-comida.jpg"
@@ -27,6 +28,7 @@
       "rating": 4,
       "category": "Criollo",
       "price": 18,
+      "spicy": 0,
       "inventoryStatus": "OUTOFSTOCK",
       "stock": false,
       "image": "https://tipsparatuviaje.com/wp-content/uploads/2019/08/arroz-con-pollo.jpg"
@@ -42,6 +44,7 @@
       "rating": 3,
       "category": "Criollo",
       "price": 25,
+      "spicy": 1,
       "inventoryStatus": "INSTOCK",
       "stock": true,
       "image": "https://tipsparatuviaje.com/wp-content/uploads/2019/08/tacu-tacu.jpg"
@@ -56,6 +59,7 @@
       "rating": 5,
       "category": "China",
       "price": 17,
+      "spicy": 2,
       "inventoryStatus": "INSTOCK",
       "stock": true,
       "image": "https://tipsparatuviaje.com/wp-content/uploads/2019/08/arroz-chaufa-peruano.jpg"

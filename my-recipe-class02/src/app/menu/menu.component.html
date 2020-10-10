@@ -2,7 +2,21 @@
 Hola {{name}}
 
 <ul>
-    <li *ngFor="let dish of dishes"  class="dishes" [style.display]="show(dish.stock)">
-        <app-dish *ngIf="dish.stock" [dish]="dish"></app-dish>
+    <!--
+        <li *ngFor="let dish of dishes"  class="dishes" [style.display]="show(dish.stock)">
+        <li *ngFor="let dish of dishes"  class="dishes" [ngStyle]="{display:show(dish.stock)}">
+     -->
+     <li *ngFor="let dish of dishes"  class="dishes" [ngClass]="validateStock(dish.stock)">
+        <app-dish [dish]="dish"></app-dish>
+
+        
+        <div [ngSwitch]="dish.spicy" >
+            <div *ngSwitchCase="0" [ngClass]="showSpicy(dish.spicy)">No pica</div>
+            <div *ngSwitchCase="1" [ngClass]="showSpicy(dish.spicy)">Pica Poco</div>
+            <div *ngSwitchCase="2" [ngClass]="showSpicy(dish.spicy)">Pica</div>
+            <div *ngSwitchCase="3" [ngClass]="showSpicy(dish.spicy)">Picante</div>
+            <div *ngSwitchCase="4" [ngClass]="showSpicy(dish.spicy)">Muy Picante</div>
+            <div *ngSwitchDefault [ngClass]="showSpicy(dish.spicy)">Value for default</div>
+        </div>
     </li>
 </ul>

@@ -39,4 +39,5 @@ export class DishComponent implements OnInit {
   get totalIngredients(): number{
     return this._totalIngredients;
   }
+
 }

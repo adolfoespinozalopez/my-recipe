@@ -14,6 +14,13 @@ export interface Ingredient{
     quantity: string;
 }
 
+enum SpicyCategory {
+    NO_PICA = 0,
+    PICA_POCO = 1,
+    PICA = 2,
+    PICANTE = 3,
+    MUY_PICANTE = 4
+}
 export class Dish {
     id: number;
     name: string;
@@ -21,6 +28,7 @@ export class Dish {
     rating: number;
     category: string;
     price: number;
+    spicy: SpicyCategory;
     inventoryStatus: string;
     stock: boolean;
     image: string;
