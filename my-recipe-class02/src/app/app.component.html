@@ -1,4 +1,22 @@
-<app-menu></app-menu>
+<div class="md-12">Enlaces</div>
+<div class="md-6">
+<a routerLink="/country">Country</a>
+</div>
+<div class="md-6">
+<a routerLink="/order">Order</a>
+</div>
+
+<div class="md-12">
+    <a routerLink="/contact">Contact</a>
+</div>
+<div class="md-12">
+    <a routerLink="/app-mat-menu">Menu Material</a>
+
+    <a [routerLink]="[{ outlets: { primary: ['menuMat'],sidebar: ['menuMat'] } }]">
+        Products List
+    </a>
+</div>
+<router-outlet></router-outlet>
 <!--
 <app-countries></app-countries>
 -->

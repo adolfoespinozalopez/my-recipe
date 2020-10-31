@@ -12,6 +12,7 @@ export class DishComponent implements OnInit {
   // @Input() name = 'ceviche';
   private _name: string;
   private _totalIngredients: number;
+  private _spicy: number;
 
   get name(): string{
     return this._name;
@@ -30,6 +31,7 @@ export class DishComponent implements OnInit {
     console.log(':: -> ', value);
     this._name = this.generateName(value.name);
     this._totalIngredients = value.ingredients.length;
+    this._spicy = value.spicy;
   }
 
   generateName(name: string): string{
@@ -39,5 +41,11 @@ export class DishComponent implements OnInit {
   get totalIngredients(): number{
     return this._totalIngredients;
   }
+  get spicy(): number{
+    return this._spicy;
+  }
 
+  showSpicy(value: number): string{
+    return (value > 2) ? 'spicy' : 'no-spicy';
+  }
 }

@@ -5,4 +5,13 @@
     <p>
         <button>Seleccionar</button>
     </p>
+
+    <div [ngSwitch]="spicy" >
+        <div *ngSwitchCase="0" [ngClass]="showSpicy(spicy)">No pica</div>
+        <div *ngSwitchCase="1" [ngClass]="showSpicy(spicy)">Pica Poco</div>
+        <div *ngSwitchCase="2" [ngClass]="showSpicy(spicy)">Pica</div>
+        <div *ngSwitchCase="3" [ngClass]="showSpicy(spicy)">Picante</div>
+        <div *ngSwitchCase="4" [ngClass]="showSpicy(spicy)">Muy Picante</div>
+        <div *ngSwitchDefault [ngClass]="showSpicy(spicy)">Value for default</div>
+    </div>
 </div>

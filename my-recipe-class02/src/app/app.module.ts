@@ -8,6 +8,10 @@ import { DishComponent } from './dish/dish.component';
 import { OrderComponent } from './order/order.component';
 import { CountriesComponent } from './countries/countries.component';
 import { FilesizePipe } from '@app/pipes';
+import { BoxShadowDirective } from './directives/box-shadow.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MaterialAllModule } from './material-all.module';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { FilesizePipe } from '@app/pipes';
     DishComponent,
     OrderComponent,
     CountriesComponent,
-    FilesizePipe
+    FilesizePipe,
+    BoxShadowDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    LayoutModule,
+    MaterialAllModule
   ],
   providers: [],
   bootstrap: [AppComponent]

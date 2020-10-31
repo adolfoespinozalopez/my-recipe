@@ -28,4 +28,5 @@ export class CountriesComponent implements OnInit {
     name = this.upperCasePipe.transform(name);
     console.log('Despues = ', name);
   }
+
 }
